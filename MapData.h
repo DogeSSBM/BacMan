@@ -3,7 +3,7 @@
 
 #define MAPDATA { \
     {_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW,_BW},\
-    {_BW,_BS,_BS,_BL,_BS,_BS,_BS,_BS,_BS,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BS,_BS,_BS,_BS,_BW,_BW,_BS,_BS,_BS,_BS,_BW},\
+    {_BW,_BS,_BS,_BL,_BS,_BS,_BS,_BS,_BS,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BS,_BS,_BS,_BL,_BW,_BW,_BS,_BS,_BS,_BS,_BW},\
     {_BW,_BS,_BW,_BW,_BW,_BS,_BW,_BW,_BS,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BS,_BW,_BW,_BS,_BW,_BW,_BS,_BW,_BW,_BS,_BW},\
     {_BW,_BS,_BW,_BE,_BW,_BS,_BW,_BW,_BS,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BS,_BW,_BW,_BS,_BS,_BS,_BS,_BW,_BW,_BS,_BW},\
     {_BW,_BS,_BW,_BE,_BW,_BS,_BW,_BW,_BS,_BW,_BE,_BE,_BE,_BW,_BE,_BW,_BE,_BE,_BE,_BW,_BS,_BW,_BW,_BW,_BW,_BW,_BS,_BW,_BW,_BS,_BW},\
