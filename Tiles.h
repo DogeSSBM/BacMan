@@ -28,21 +28,28 @@ bool inMap(const Coord pos)
 
 void drawWall(const Coord pos, int board[28][31])
 {
-    if (!inMap(pos) || board[pos.x][pos.y] != TILE_ID_WALL)
+    if(!inMap(pos) || board[pos.x][pos.y] != TILE_ID_WALL)
         return;
 
-    const Coord screenPos = {.x = pos.x * TILE_LEN + TILE_HLF, .y = pos.y * TILE_LEN + TILE_HLF};
+    const Coord screenPos = coordAddi(coordMuli(pos, TILE_LEN), TILE_HLF);
     setColor(BLUE);
     fillCircleCoord(screenPos, TILE_QTR-1);
 
-    for (uint dir = 0; dir < 4; dir++)
-    {
+    for(uint dir = 0; dir < 4; dir++){
         const Coord adj = coordShift(pos, dir, 1);
-        if (inMap(adj) && board[adj.x][adj.y] == TILE_ID_WALL){
-            const Coord screenAdj = {.x = adj.x * TILE_LEN + TILE_HLF, .y = adj.y * TILE_LEN + TILE_HLF};
-            const Coord c1 = coordShift(screenPos, dirROL(dir), TILE_QTR);
-            const Coord c2 = coordShift(screenAdj, dirROR(dir), TILE_QTR);
-            fillRectCoords(c1, c2);
+        const Coord adl = coordShift(adj, dirROL(dir), 1);
+        const Coord adr = coordShift(adj, dirROR(dir), 1);
+        if (
+            (inMap(adj) && board[adj.x][adj.y] == TILE_ID_WALL) && (
+                !(inMap(adl) && board[adl.x][adl.y] == TILE_ID_WALL) ||
+                !(inMap(adr) && board[adr.x][adr.y] == TILE_ID_WALL)
+            )
+        ){
+            const Coord screenAdj = coordAddi(coordMuli(adj, TILE_LEN), TILE_HLF);
+            fillRectCoords(
+                coordShift(screenPos, dirROL(dir), TILE_QTR),
+                coordShift(screenAdj, dirROR(dir), TILE_QTR)
+            );
         }
     }
 }

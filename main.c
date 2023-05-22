@@ -65,8 +65,6 @@ Ghost ghostMove(Ghost ghost, int map[28][31])
     (void)map;return ghost;
 }
 
-
-
 int main(void)
 {
     init();
